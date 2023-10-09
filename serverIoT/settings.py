@@ -56,6 +56,10 @@ MIDDLEWARE = [
     'whitenoise.middleware.WhiteNoiseMiddleware',
 ]
 
+
+SECURE_PROXY_SSL_HEADER = None
+SECURE_SSL_REDIRECT = False
+
 ROOT_URLCONF = 'serverIoT.urls'
 
 TEMPLATES = [
