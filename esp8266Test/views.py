@@ -15,7 +15,7 @@ def distancia(adc):
 def index(request):
     if(request.method == "POST"):
         data = json.loads(request.body.decode("utf-8"))
-        value = int(data.get("value"))
+        value = float(data.get("value"))
         distancia_cm = distancia(value)
         
     return HttpResponse(distancia_cm)
