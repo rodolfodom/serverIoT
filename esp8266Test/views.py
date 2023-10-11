@@ -18,4 +18,4 @@ def index(request):
         value = float(data.get("value"))
         distancia_cm = distancia(value)
         
-    return HttpResponse("respuesta del servidor: " + str(distancia_cm))
+    return HttpResponse("respuesta del servidor: " + str(distancia_cm) + "cm")
