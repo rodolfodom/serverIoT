@@ -5,7 +5,7 @@ from django.views.decorators.http import require_http_methods, require_GET, requ
 import json
 
 def distancia(adc):
-    distancia_cm = 17569.7 * (adc ** -1.2062)
+    distancia_cm = 16746.73 * (adc ** -1.21234)
     return distancia_cm
 
 
@@ -18,4 +18,4 @@ def index(request):
         value = float(data.get("value"))
         distancia_cm = distancia(value)
         
-    return HttpResponse(distancia_cm)
+    return HttpResponse("respuesta del servidor: " + distancia_cm)
