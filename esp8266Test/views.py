@@ -5,7 +5,7 @@ from django.views.decorators.http import require_http_methods, require_GET, requ
 import json
 
 def distancia(adc):
-    distancia_cm = 27.86 / (adc - 0.1)
+    distancia_cm = 17569.7 * (adc ** -1.2062)
     return distancia_cm
 
 
